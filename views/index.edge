@@ -1,0 +1,48 @@
+@layout('layouts.app')
+@section('content')
+
+@if(message.length > 0)
+    <div id="flash-messages">
+        {{message}}
+    </div>
+@endif
+
+
+<section class="home" id="home">
+    <div class="home-text container">
+    <h2 class="home-title">LWF BLog</h2>
+    <span class="home-subtitle">Farming is the future!</span>
+    </div>
+</section>
+
+<!-- Post Filter -->
+<div class="post-filter container">
+<span class="filter-item active-filter" data-filter="all">All</span>
+<span class="filter-item" data-filter="home-garden">Home-Garden</span>
+<span class="filter-item" data-filter="cash-crops">Cash-Crops</span>
+<span class="filter-item" data-filter="other">Other</span>
+</div>
+
+<!-- Posts -->
+<section class="post container">
+    <!-- Post box 1 -->
+    @each(post in posts)
+    <div class="post-box cash-crops" >
+        <img src="{{post.image}}" alt="tea-farm-image" class="post-img">
+        <h2 class="category">CASH-CROPS</h2>
+        <a href="/posts/{{post.id}}" class="post-title">
+           {{post.title}}
+        </a>
+        <span class="post-date">{{post.createdAt}}</span>
+        <p class="post-description">{{post.description}}</p>
+        <!-- Profile -->
+        <div class="profile">
+            <img src="images/profile-pic.jpg" alt="profile-img" class="profile-img">
+            <span class="profile-name">{{post.username}}</span>
+        </div>
+    </div>
+    @endeach
+    
+</section>
+
+@endsection

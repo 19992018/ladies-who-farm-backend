@@ -1,0 +1,37 @@
+@layout('layouts.app')
+@section('content')
+
+{{--  <section class="home" id="home">
+    <div class="home-text container">
+    <h2 class="home-title">{{post.title}}</h2>
+    <span class="home-subtitle">{{post.description}}</span>
+    </div>
+</section>  --}}
+<section class="post-header">
+    <div class="header-content post-container">
+        <!-- Back To Home -->
+        <a href="index.html" class="back-home">Back To Home</a>
+        <!-- Title -->
+        <h1 class="header-title">{{post.title}}</h1>
+        <!-- Post image -->
+        <img  src="{{post.image}}" alt="tea-farm-image" class="header-img" >
+    </div>
+</section>
+
+<!-- Main Content-->
+{{--  <div class="container px-4 px-lg-5" style="padding: 100px;">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+     <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div> 
+            {{post.content}}
+        </div>
+    </div>
+</div>  --}}
+
+<!-- Posts -->
+<section class="post-content post-container">
+    {{post.content}}
+</section>
+<!-- Share -->
+
+@endsection

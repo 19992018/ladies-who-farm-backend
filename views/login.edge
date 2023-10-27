@@ -1,0 +1,167 @@
+{{--  @layout('layouts.app')  --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LWF | Home</title>
+    <link rel="icon" type="image/x-icon" href="/images/lwh-logo-tentative.png">
+    
+    <!-- Box Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    {{--  Font Awesome  --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+
+<!-- CSS Link -->
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <!-- Nav -->
+    <header>
+      <div class="nav container">
+      <!-- Logo -->
+      <a href="/" class="logo">Ladies <span>Who Farm</span></a>
+      <!-- Login btn-->
+      <div class="buttons-menu">
+          {{--  <a href="#" class="login">Home</a>
+          <a href="#" class="login">Create Post</a>
+          <a href="#" class="login">Register</a>
+          <a href="#" class="login">LOGIN</a>  --}}
+      
+      <ul class="menu">
+          <li><a href="/" class="login">Home</a></li>
+          <li><a href="/posts/new" class="login">Create Post</a></li>
+          <li><a href="/auth/register" class="login">Register</a></li>
+          <li><a href="/auth/login" class="login">LOGIN</a></li>
+        </ul>
+      <button class="hamburger">
+          <!-- material icons https://material.io/resources/icons/ -->
+          {{--  <i class="menuIcon material-icons">menu</i>
+          <i class="closeIcon material-icons">close</i>  --}}
+
+          <i class="menuIcon style-menu fa-solid fa-bars"></i>
+          <i class="closeIcon style-menu fa-solid fa-x"></i>
+        </button>
+      </div>
+      
+      </div>
+
+</header>
+{{--  @section('content')  --}}
+
+<section class="home" id="home">
+    <div class="home-text container">
+    <h2 class="home-title">Log In </h2>
+    <span class="home-subtitle">To create Post</span>
+    </div>
+</section>
+
+  <!-- Main Content-->
+ <div class="container px-4 px-lg-5" style="padding: 4rem;">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+    <form action="/auth/login" method="POST">
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control">
+          </div>
+        </div>
+    
+        <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Password</label>
+              <input type="password" name="password" class="form-control" required> 
+            </div>
+          </div>
+        
+       
+        <div class="form-group my-4 text-center">
+         <input type="submit" value="Submit" class="btn btn-success btn-xl">
+        </div>
+      </form>
+        </div>
+    </div>
+</div>    
+
+
+
+
+{{--  <section id="create-form">
+  <form action="/posts/store" method="POST" enctype="multipart/form-data">
+  <h2>Create Post</h2>
+  
+  <div class="floater-div">
+    <div class="left"><label for="title" >Title </label>  </div> 
+     <div class="right"><input type="text" id="title" size="30" required><br><br></div>         
+ </div>
+
+ <div class="floater-div">
+  <div class="left"><label for="username" >Username </label>  </div> 
+   <div class="right"><input type="text" id="username" size="30" required><br><br></div>         
+</div>
+  
+  <div class="floater-div for-textarea">
+      <div class="left"><label for="description" >Description</label>  </div>
+      <div class="right"><textarea name="" id="description" cols="32" rows="4" required></textarea><br><br> </div>
+
+  </div>
+  
+   <div class="floater-div radio-btns">
+      <div class="left"><label>Category</label></div>
+          <div class="right">           
+            <input type="radio" id="home-garden" name="categories">
+            <label for="home-garden">home-garden</label><br>
+            <input type="radio" id="cash-crop" name="categories">
+            <label for="cash-crop">cash-crop</label><br>
+            <input type="radio" id="other" name="categories">
+            <label for="other">other</label><br>
+          </div>
+   </div>
+   
+   <div class="form-group mt-3">
+    <input type="file" name="image" class="form-control-file">
+  </div>
+
+  <div class="form-group my-4 text-center">
+    <input type="submit" value="Submit" class="btn btn-primary btn-xl">
+   </div>  --}}
+  
+
+{{--  <button>CREATE POST</button>
+</form>
+
+</section>  --}}
+
+{{--  @endsection  --}}
+
+<!-- Footer -->
+<div class="footer container">
+  <p>&#169; All Rights Reserved </p>
+  <div class="social">
+      <a href="https://www.youtube.com/channel/UCdqRck5IInzXLUqRT6Fuh1g"><i class='bx bxl-youtube'></i></a>
+      <a href="https://twitter.com/farmeronfire1?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class='bx bxl-twitter'></i></a>
+      <a href="https://www.instagram.com/farmeronfire_love/"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-whatsapp'></i></a>
+
+
+  </div>
+
+</div>
+
+  <!-- JQuery Link -->
+  <script
+src="https://code.jquery.com/jquery-3.6.4.js"
+integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+crossorigin="anonymous"></script>
+  <!-- Link to JS -->
+  <script src="/js/main.js"></script>
+</body>
+</html>

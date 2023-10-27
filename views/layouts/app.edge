@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LWF | Home</title>
+    <link rel="icon" type="image/x-icon" href="/images/lwh-logo-tentative.png">
+
+    {{--  Font Awesome  --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Box Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+
+<!-- CSS Link -->
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <!-- Nav -->
+<header>
+        <div class="nav container">
+        <!-- Logo -->
+        <a href="#" class="logo">Ladies <span>Who Farm</span></a>
+        <!-- Login btn-->
+        <div class="buttons-menu">
+            {{--  <a href="#" class="login">Home</a>
+            <a href="#" class="login">Create Post</a>
+            <a href="#" class="login">Register</a>
+            <a href="#" class="login">LOGIN</a>  --}}
+        
+        <ul class="menu">
+            <li><a href="/" class="login">Home</a></li>
+            <li><a href="/posts/new" class="login">Create Post</a></li>
+            {{--  @if(!userId)  --}}
+            <li><a href="/auth/register" class="login">Register</a></li>
+            <li><a href="/auth/login" class="login">Login</a></li>
+            {{--  @else  --}}
+            {{--  <li><a href="#" class="login">{{user.username}}</a></li>  --}}
+            <li><a href="/auth/logout" class="login">Logout</a></li>
+            {{--  @endif  --}}
+          </ul>
+        <button class="hamburger">
+            <!-- material icons https://material.io/resources/icons/ -->
+            {{--  <i class="menuIcon material-icons">menu</i>
+            <i class="closeIcon material-icons">close</i>  --}}
+
+            <i class="menuIcon fa-solid fa-bars"></i>
+            <i class="closeIcon fa-solid fa-x"></i>
+          </button>
+        </div>
+        
+        </div>
+
+</header>
+
+    @!section('content')
+
+<!-- Footer -->
+<div class="footer container">
+    <p>&#169; All Rights Reserved </p>
+    <div class="social">
+        <a href="https://www.youtube.com/channel/UCdqRck5IInzXLUqRT6Fuh1g"><i class='bx bxl-youtube'></i></a>
+        <a href="https://twitter.com/farmeronfire1?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class='bx bxl-twitter'></i></a>
+        <a href="https://www.instagram.com/farmeronfire_love/"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-whatsapp'></i></a>
+
+
+    </div>
+
+</div>
+
+    <!-- JQuery Link -->
+    <script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+    <!-- Link to JS -->
+    <script src="/js/main.js"></script>
+</body>
+</html>
